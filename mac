@@ -49,6 +49,7 @@ case "$SHELL" in
   */zsh) : ;;
   *)
     fancy_echo "Changing your shell to zsh ..."
+      printf "%s\n" "$(which zsh)" >> "/etc/shells"
       chsh -s "$(which zsh)"
     ;;
 esac
